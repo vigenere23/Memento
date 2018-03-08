@@ -1,2 +1,10 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<%= render(
+	partial: 'components/hero_div',
+	locals: {
+		text: "It's all about small moments in our lives",
+		bg_url: 'hero_bg.svg',
+		button: true,
+		button_text: 'Read more',
+		button_url: '#about'
+	}
+) %>
