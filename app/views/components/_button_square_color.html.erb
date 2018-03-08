@@ -1,0 +1,8 @@
+<% url = local_assigns[:link] ? link : "" %>
+<a class="button-square-color" href=<%= link %>>
+	<% if local_assigns[:text] %>
+		<%= text %>
+	<% else %>
+		<% 'Button' %>
+	<% end %>
+</a>

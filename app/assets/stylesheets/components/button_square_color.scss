@@ -1,0 +1,22 @@
+@import '_variables';
+
+.button-square-color {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 40px;
+	height: 30px;
+	padding: 0 10px;
+	color: white;
+	background-color: $primary-color;
+	font-size: 13px;
+	font-weight: 600;
+	text-transform: uppercase;
+	border-radius: 2px;
+	transition: box-shadow $easing;
+
+	&:hover {
+		box-shadow: $shadow-level-1;
+		transition: box-shadow $easing;
+	}
+}

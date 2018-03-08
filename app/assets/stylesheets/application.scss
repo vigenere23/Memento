@@ -28,9 +28,14 @@ a {
 
 body {
 	padding: 0;
+	padding-top: 64px;
 	margin: 0;
 	font-family: 'Open Sans';
 	font-size: 16px;
 	font-weight: 400;
 	color: $primary-text;
+
+	@media screen and (max-width: $phone) {
+		padding-top: 48px;
+	}
 }

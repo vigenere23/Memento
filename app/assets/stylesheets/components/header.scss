@@ -6,7 +6,11 @@ header {
 	background-color: white;
 	display: flex;
 	align-items: center;
-	box-shadow: $shadow-level-2;
+	justify-content: space-between;
+	position: fixed;
+	top: 0;
+	// box-shadow: $shadow-level-2;
+	border-bottom: 2px solid $divider;
 
 	@media screen and (max-width: $phone) {
 		height: 48px;
@@ -15,11 +19,12 @@ header {
 	.logo {
 		display: flex;
 		align-items: center;
-		justify-content: center;
 		height: 100%;
-		padding: 0 10px;
-		font-family: 'Roboto Slab';
-		font-size: 20px;
+		padding: 0 16px;
+		padding-top: 6px;
+		font-family: 'Crimson Text';
+		font-size: 26px;
+		font-weight: 600;
 		transition: color $easing;
 
 		&:hover {
@@ -28,8 +33,15 @@ header {
 		}
 
 		@media screen and (max-width: $phone) {
-			font-size: 18px;
+			font-size: 22px;
 		}
+	}
+
+	.actions {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		padding: 0 16px;
 	}
 }
 

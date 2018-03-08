@@ -1,7 +1,17 @@
 <% content_for :head do %>
 	<%= stylesheet_link_tag 'components/header', media: 'all', 'data-turbolinks-track': 'reload' %>
+	<%= javascript_include_tag 'components/header', media: 'all', 'data-turbolinks-track': 'reload' %>
 <% end %>
 
 <header>
 	<a class="logo" href="/">Memento</a>
+	<div class="actions">
+		<%= render(
+			partial: 'components/button_square_color',
+			locals: {
+				text: 'View notes',
+				link: './notes'
+			}
+		) %>
+	</div>
 </header>
