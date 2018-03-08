@@ -1,24 +1,26 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Memento is an app about sharing small moments, thoughts, or even ideas, from wherever you are in the world.
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
+To run the app, you need to have the following prerequisites: 
 
-* System dependencies
+- Lastest installation of Ruby
+- Lastest installation of Ruby on Rails
 
-* Configuration
+Then, open a command prompt, navigate to the cloned project folder and run the following commands: 
 
-* Database creation
+```bash
+bundle install
+rails server
+```
 
-* Database initialization
+and then navigate to [http://localhost:3000]().
 
-* How to run the test suite
+## To do
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Creating art for hero-backgrounds
+- Creating a database for the notes
+- Finishing creating the basic view partials (components)
+- 
