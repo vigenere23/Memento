@@ -1,0 +1,23 @@
+<svg width="342.36" height="341.61" version="1.1" viewBox="0 0 90.581517 90.384287" xmlns="http://www.w3.org/2000/svg">
+	<defs>
+		<filter id="filter4719" x="-.024" y="-.024" width="1.048" height="1.048" color-interpolation-filters="sRGB">
+			<feGaussianBlur stdDeviation="0.53699924"/>
+		</filter>
+		<filter id="filter4771" x="-.024" y="-.024" width="1.048" height="1.048" color-interpolation-filters="sRGB">
+			<feGaussianBlur stdDeviation="0.48193908"/>
+		</filter>
+		<filter id="filter4795" x="-.024" y="-.024" width="1.048" height="1.048" color-interpolation-filters="sRGB">
+			<feGaussianBlur stdDeviation="0.52597514"/>
+		</filter>
+	</defs>
+	<g transform="translate(9.3081 26.75)">
+		<g transform="rotate(178.86 29.545 22.726)">
+			<rect transform="rotate(9.9532 3.0436 -.20431)" x="17.955" y="-19.936" width="47.307" height="47.307" rx="1.0583" ry="1.0583" filter="url(#filter4719)" opacity=".5"/>
+			<rect transform="rotate(9.9532)" x="17.955" y="-19.936" width="47.307" height="47.307" rx="1.0583" ry="1.0583" fill="#f5ea7d"/>
+			<rect transform="rotate(-6.0389 -5.0103 -.36404)" x="4.3645" y="24.674" width="47.307" height="47.307" rx="1.0583" ry="1.0583" filter="url(#filter4795)" opacity=".5"/>
+			<rect transform="rotate(-6.0389)" x="4.3645" y="24.674" width="47.307" height="47.307" rx="1.0583" ry="1.0583" fill="#7da3f5"/>
+			<rect x="-20.435" y="-7.58" width="47.307" height="47.307" rx="1.0583" ry="1.0583" filter="url(#filter4771)" opacity=".5"/>
+			<rect x="-20.446" y="-7.0508" width="47.307" height="47.307" rx="1.0583" ry="1.0583" fill="#f57ded"/>
+		</g>
+	</g>
+</svg>

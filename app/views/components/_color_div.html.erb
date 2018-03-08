@@ -1,0 +1,17 @@
+<% button = false if local_assigns[:button].nil? %>
+
+<div class="color-div">
+	<h1><%= text %></h1>
+	<% if button %>
+		<div class="button">
+			<%= render(
+				partial: 'components/button_square_color',
+				locals: {
+					text: button_text,
+					url: button_url,
+					classes: ['floating', 'white', 'big']
+				}
+			) %>
+		</div>
+	<% end %>
+</div>

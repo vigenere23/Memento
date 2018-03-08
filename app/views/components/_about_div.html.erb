@@ -1,0 +1,14 @@
+<% id = '' if local_assigns[:id].nil? %>
+<% align = align_left ? 'left' : 'right' %>
+
+<div class="about-div" id="<%= id %>">
+	<div class="<%= align %>">
+		<div class="about-content">
+			<h2 class="title"><%= title %></h2>
+			<p class="text"><%= text %></p>
+		</div>
+		<% if !(local_assigns[:image].nil?) %>
+			<%= image_tag image %>
+		<% end %>
+	</div>
+</div>

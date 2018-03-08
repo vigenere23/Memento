@@ -18,3 +18,35 @@
 		button_url: '#about'
 	}
 ) %>
+
+<%= render(
+	partial: 'components/about_div',
+	locals: {
+		id: 'about',
+		align_left: true,
+		title: 'Share your important moments',
+		text: 'Let the world know about your successes, your losses, your thoughts. From wherever your are, be free. Let anyone know who you are.',
+		image: 'notes.svg'
+	}
+) %>
+
+<%= render(
+	partial: 'components/about_div',
+	locals: {
+		id: 'about',
+		align_left: false,
+		title: 'Know what people around the world think',
+		text: 'See thousands of texts from all the countries, arranged in a beautiful collection of sticky notes. You will never be alone anymore.',
+		image: 'earth.svg'
+	}
+) %>
+
+<%= render(
+	partial: 'components/color_div',
+	locals: {
+		text: 'What are you waiting?',
+		button: true,
+		button_text: 'View notes',
+		button_url: './notes'
+	}
+) %>
