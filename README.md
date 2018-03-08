@@ -16,7 +16,7 @@ bundle install
 rails server
 ```
 
-and then navigate to [http://localhost:3000]().
+and then navigate to http://localhost:3000.
 
 ## To do
 
