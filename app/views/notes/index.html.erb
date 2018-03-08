@@ -1,4 +1,14 @@
 <%= render(
+	partial: 'components/header',
+	locals: {
+		actions: [
+			text: 'New note',
+			url: './notes/new'
+		]
+	}
+) %>
+
+<%= render(
 	partial: 'components/hero_div',
 	locals: {
 		text: 'Read notes from all across the world',

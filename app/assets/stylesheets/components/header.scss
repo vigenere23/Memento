@@ -23,7 +23,7 @@ header {
 		height: 100%;
 		padding: 0 16px;
 		padding-top: 6px;
-		font-family: 'Crimson Text';
+		font-family: $font-serif;
 		font-size: 26px;
 		font-weight: 600;
 		transition: color $easing;
@@ -43,6 +43,14 @@ header {
 		align-items: center;
 		height: 100%;
 		padding: 0 16px;
+
+		> * {
+			margin-right: 10px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
 	}
 }
 

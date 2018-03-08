@@ -1,4 +1,14 @@
 <%= render(
+	partial: 'components/header',
+	locals: {
+		actions: [
+			text: 'View notes',
+			url: './notes'
+		]
+	}
+) %>
+
+<%= render(
 	partial: 'components/hero_div',
 	locals: {
 		text: "It's all about small moments in our lives",

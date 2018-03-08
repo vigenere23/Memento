@@ -29,7 +29,7 @@ body {
 	padding: 0;
 	padding-top: 64px;
 	margin: 0;
-	font-family: 'Open Sans';
+	font-family: $font-sans;
 	font-size: 16px;
 	font-weight: 400;
 	color: $primary-text;
@@ -45,5 +45,5 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Crimson Text';
+	font-family: $font-serif;
 }

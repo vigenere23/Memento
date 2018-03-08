@@ -3,15 +3,21 @@
 	<%#= javascript_include_tag 'components/header', media: 'all', 'data-turbolinks-track': 'reload' %>
 <%# end %>
 
+<% actions = [] if local_assigns[:actions].nil? %>
+
 <header>
 	<a class="logo" href="/">Memento</a>
-	<div class="actions">
-		<%= render(
-			partial: 'components/button_square_color',
-			locals: {
-				text: 'View notes',
-				url: './notes'
-			}
-		) %>
-	</div>
+	<% if !(actions.nil?) %>
+		<div class="actions">
+			<% actions.each do |action| %>
+				<%= render(
+					partial: 'components/button_square_color',
+					locals: {
+						text: action[:text],
+						url: action[:url]
+					}
+				) %>
+			<% end %>
+		</div>
+	<% end %>
 </header>

@@ -1,10 +1,61 @@
-<% n = 11 %>
+<% notes = [
+	{
+		text: "Today, i've been carrying the most precious object in the world: my heart.",
+		country: "Peru"
+	},
+	{
+		text: "Today, i've been carrying the most precious object in the world: my heart.",
+		country: "Peru"
+	},
+	{
+		text: "Today, i've been carrying the most precious object in the world: my heart.",
+		country: "Peru"
+	},
+	{
+		text: "Today, i've been carrying the most precious object in the world: my heart.",
+		country: "Peru"
+	},
+	{
+		text: "Today, i've been carrying the most precious object in the world: my heart.",
+		country: "Peru"
+	},
+	{
+		text: "Today, i've been carrying the most precious object in the world: my heart.",
+		country: "Peru"
+	},
+	{
+		text: "Today, i've been carrying the most precious object in the world: my heart.",
+		country: "Peru"
+	},
+	{
+		text: "Today, i've been carrying the most precious object in the world: my heart.",
+		country: "Peru"
+	},
+	{
+		text: "Today, i've been carrying the most precious object in the world: my heart.",
+		country: "Peru"
+	},
+	{
+		text: "Today, i've been carrying the most precious object in the world: my heart.",
+		country: "Peru"
+	},
+	{
+		text: "Today, i've been carrying the most precious object in the world: my heart.",
+		country: "Peru"
+	},
+	{
+		text: "Today, i've been carrying the most precious object in the world: my heart.",
+		country: "Peru"
+	}
+] %>
 
 <div class="notes-container">
-	<% n.times do %>
+	<% notes.each do |note| %>
 		<%= render(
 			partial: 'components/note_single',
 			locals: {
+				text: note[:text],
+				country: note[:country],
 				bg_color: "hsl(#{rand(0..259)},85%,83%)"
 			}
 		) %>
