@@ -1,0 +1,31 @@
+@import '_variables';
+
+.note-single {
+	flex-basis: 33.33%;
+	flex-grow: 0;
+	flex-shrink: 0;
+
+	&:after {
+		content: "";
+		display: block;
+		padding-bottom: 100%;
+	}
+
+	@media screen and (max-width: $tablet) {
+		flex-basis: 50%;
+	}
+
+	@media screen and (max-width: $phone) {
+		flex-basis: 100%;
+	}
+
+	.note-content {
+		position: absolute;
+		top: 5px;
+		bottom: 5px;
+		right: 5px;
+		left: 5px;
+		border-radius: 4px;
+		box-shadow: $shadow-level-1;
+	}
+}

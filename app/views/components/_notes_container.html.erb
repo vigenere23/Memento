@@ -1,0 +1,12 @@
+<% n = 11 %>
+
+<div class="notes-container">
+	<% n.times do %>
+		<%= render(
+			partial: 'components/note_single',
+			locals: {
+				bg_color: "hsl(#{rand(0..259)},85%,83%)"
+			}
+		) %>
+	<% end %>
+</div>
