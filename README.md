@@ -20,7 +20,7 @@ and then navigate to http://localhost:3000.
 
 ## To do
 
-- Creating art for hero-backgrounds
 - Creating a database for the notes
-- Finishing creating the basic view partials (components)
+- Creating a model for the notes
+- Adding a footer
 - 
