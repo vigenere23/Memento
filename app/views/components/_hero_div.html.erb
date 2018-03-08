@@ -1,0 +1,24 @@
+<% bg_url = '' if local_assigns[:bg_url].nil? %>
+<% button = false if local_assigns[:button].nil? %>
+
+<div
+	class="hero-div"
+	style=<%= "background:"\
+		"linear-gradient(#1E88E5,#1E88E5),"\
+		"url(#{bg_url});"
+	%>
+>
+	<h1><%= text %></h1>
+	<% if button %>
+		<div class="button">
+			<%= render(
+				partial: 'components/button_square_color',
+				locals: {
+					text: button_text,
+					url: button_url,
+					classes: ['floating', 'white', 'big']
+				}
+			) %>
+		</div>
+	<% end %>
+</div>

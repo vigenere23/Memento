@@ -1,8 +1,6 @@
-<% url = local_assigns[:link] ? link : "" %>
-<a class="button-square-color" href=<%= link %>>
-	<% if local_assigns[:text] %>
-		<%= text %>
-	<% else %>
-		<% 'Button' %>
-	<% end %>
-</a>
+<% url = '#' if local_assigns[:url].nil? %>
+<% text = 'Button' if local_assigns[:text].nil? %>
+<% classes = [] if local_assigns[:classes].nil? %>
+<% classes << "button-square-color" %>
+
+<%= link_to(text, {}, {:href => url, :class => classes.join(' ')}) %>

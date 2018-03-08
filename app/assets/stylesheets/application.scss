@@ -21,11 +21,6 @@
 	box-sizing: border-box;
 }
 
-a {
-	color: inherit;
-	text-decoration: inherit;
-}
-
 body {
 	padding: 0;
 	padding-top: 64px;
@@ -38,4 +33,13 @@ body {
 	@media screen and (max-width: $phone) {
 		padding-top: 48px;
 	}
+}
+
+a {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Crimson Text';
 }

@@ -1,7 +1,7 @@
-<% content_for :head do %>
-	<%= stylesheet_link_tag 'components/header', media: 'all', 'data-turbolinks-track': 'reload' %>
-	<%= javascript_include_tag 'components/header', media: 'all', 'data-turbolinks-track': 'reload' %>
-<% end %>
+<%# content_for :head do %>
+	<%#= stylesheet_link_tag 'components/header', media: 'all', 'data-turbolinks-track': 'reload' %>
+	<%#= javascript_include_tag 'components/header', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%# end %>
 
 <header>
 	<a class="logo" href="/">Memento</a>
@@ -10,7 +10,7 @@
 			partial: 'components/button_square_color',
 			locals: {
 				text: 'View notes',
-				link: './notes'
+				url: './notes'
 			}
 		) %>
 	</div>
