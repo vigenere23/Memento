@@ -52,14 +52,14 @@
 			justify-content: flex-start;
 
 			img {
-				right: 0;
+				left: 70%;
 
 				@media screen and (max-width: $tablet) {
-					right: -20%;
+					left: 75%;
 				}
 
 				@media screen and (max-width: $phone) {
-					right: -40%;
+					left: 80%;
 				}
 			}
 		}
@@ -68,14 +68,14 @@
 			justify-content: flex-end;
 
 			img {
-				left: 0;
+				right: 70%;
 
 				@media screen and (max-width: $tablet) {
-					left: -20%;
+					right: 75%;
 				}
 
 				@media screen and (max-width: $phone) {
-					left: -40%;
+					right: 80%;
 				}
 			}
 		}
