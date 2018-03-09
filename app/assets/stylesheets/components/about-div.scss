@@ -8,6 +8,7 @@
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
+	overflow: hidden;
 
 	> div {
 		width: 100%;
@@ -32,6 +33,7 @@
 			> .text {
 				font-size: 18px;
 				font-weight: 600;
+				color: $secondary-text;
 				margin: 0;
 				z-index: 2;
 			}

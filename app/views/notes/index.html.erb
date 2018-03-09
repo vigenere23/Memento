@@ -20,5 +20,10 @@
 ) %>
 
 <div class="notes-wrapper">
-	<%= render 'components/notes_container' %>
+	<%= render(
+		partial: 'components/notes_container',
+		locals: {
+			notes: @notes
+		}
+	) %>
 </div>
