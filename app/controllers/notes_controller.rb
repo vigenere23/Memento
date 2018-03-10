@@ -3,6 +3,10 @@ class NotesController < ApplicationController
 		@notes = Note.order(created_at: :desc).select(:text, :country)
 	end
 
+	def new
+		@countries = Country.select(:name)
+	end
+
 	def create
 		@note = Note.new(note_params)
 		@note.save

@@ -1,0 +1,11 @@
+<%= form_with scope: :note, url: notes_path, local: true do |form| %>
+	<%= form.text_area :text, :class => "text" %>
+
+	<select name="note[country]" class="country">
+		<% @countries.each do |country| %>
+			<%= content_tag(:option, country.name, value: country.name) %>
+		<% end %>
+	</select>
+
+	<%= form.submit "Send", :class => "button-square-color small" %>
+<% end %>

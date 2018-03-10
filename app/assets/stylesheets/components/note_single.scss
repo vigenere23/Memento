@@ -1,25 +1,8 @@
 @import '_variables';
 
 .note-single {
-	flex-basis: 33.33%;
-	flex-grow: 0;
-	flex-shrink: 0;
-	min-width: 250px;
-	max-width: 300px;
-
-	&:after {
-		content: "";
-		display: block;
-		padding-bottom: 100%;
-	}
-
-	@media screen and (max-width: $tablet) {
-		flex-basis: 50%;
-	}
-
-	@media screen and (max-width: $phone) {
-		flex-basis: 100%;
-	}
+	// if used with notes-container,
+	// view style in _notes_container.scss
 
 	.the-note {
 		position: absolute;
