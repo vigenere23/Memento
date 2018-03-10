@@ -20,7 +20,11 @@ and then navigate to http://localhost:3000.
 
 ## To do
 
-- Creating a database for the notes
-- Creating a model for the notes
+- Fixing database not saving data as UTF-8 (should check for notes too)
+- Adding a graph for most popular countries
+- Creating a note-like ui for new notes
+	- Maybe a js animation that inserts a new note to the array
+	- Having a separate note_single_form component that redesigns a bit the note
 - Adding a footer
+- AJAX loadings
 - 
