@@ -54,7 +54,10 @@
 		partial: 'components/notes/note_single',
 		locals: {
 			type: 'form',
-			content: {}
+			content: {
+				text: 'Tap here to write a new note...',
+				country: 'Canada'
+			}
 		}
 	) %>
 	<% notes.each do |note| %>

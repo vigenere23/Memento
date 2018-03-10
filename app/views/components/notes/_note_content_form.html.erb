@@ -1,11 +1,12 @@
 <%= form_with scope: :note, url: notes_path, local: true do |form| %>
-	<%= form.text_area :text, :class => "text" %>
+	<%= form.text_area :text, class: "text", placeholder: content[:text] %>
 
+	<%#= form.collection_select(:note, :country, @countries, :name, :name, class: "country") %>
 	<select name="note[country]" class="country">
-		<% @countries.each do |country| %>
-			<%= content_tag(:option, country.name, value: country.name) %>
+		<% @countries.each do |c| %>
+			<%= content_tag(:option, c.name, value: c.name) %>
 		<% end %>
 	</select>
 
-	<%# form.submit "Send", :class => "button-square-color small" %>
+	<% form.submit "Send", :class => "button-square-color small" %>
 <% end %>

@@ -1,6 +1,7 @@
 class NotesController < ApplicationController
 	def index
 		@notes = Note.order(created_at: :desc).select(:text, :country)
+		@countries = Country.select(:id,:name)
 	end
 
 	def new
