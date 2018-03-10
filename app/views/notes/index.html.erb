@@ -9,7 +9,7 @@
 ) %>
 
 <%= render(
-	partial: 'components/hero_div',
+	partial: 'components/divs/hero_div',
 	locals: {
 		text: 'Read notes from all across the world',
 		bg_url: 'hero_bg.svg',
@@ -21,7 +21,7 @@
 
 <div class="notes-wrapper">
 	<%= render(
-		partial: 'components/notes_container',
+		partial: 'components/notes/notes_container',
 		locals: {
 			notes: @notes
 		}

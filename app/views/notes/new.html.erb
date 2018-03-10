@@ -1,1 +1,11 @@
-<%= render 'components/new_note_form' %>
+<%= render(
+	partial: 'components/header',
+	locals: {
+		actions: [
+			text: 'View notes',
+			url: './notes'
+		]
+	}
+) %>
+
+<%= render 'components/notes/new_note_form' %>

@@ -52,10 +52,12 @@
 <div class="notes-container" id="notes">
 	<% notes.each do |note| %>
 		<%= render(
-			partial: 'components/note_single',
+			partial: 'components/notes/note_single',
 			locals: {
-				text: note[:text],
-				country: note[:country]
+				content: {
+					text: note[:text],
+					country: note[:country]
+				}
 			}
 		) %>
 	<% end %>
