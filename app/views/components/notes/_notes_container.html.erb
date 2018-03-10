@@ -50,10 +50,18 @@
 ] %>
 
 <div class="notes-container" id="notes">
+	<%= render(
+		partial: 'components/notes/note_single',
+		locals: {
+			type: 'form',
+			content: {}
+		}
+	) %>
 	<% notes.each do |note| %>
 		<%= render(
 			partial: 'components/notes/note_single',
 			locals: {
+				type: 'text',
 				content: {
 					text: note[:text],
 					country: note[:country]

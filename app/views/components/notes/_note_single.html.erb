@@ -4,7 +4,12 @@
 		style="background-color:<%= "hsl(#{rand(0..259)},90%,80%)" %>"
 	>
 		<div class="note-content">
-			<%= content %>
+			<%= render(
+				partial: "components/notes/note_content_#{type}",
+				locals: {
+					content: content
+				}
+			) %>
 		</div>
 	</div>
 </div>
