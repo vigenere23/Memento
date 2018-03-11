@@ -20,7 +20,6 @@ and then navigate to http://localhost:3000.
 
 ## Known issues
 
-- Smooth scroll only works on page reload because DOM is not reloaded with rails
 - Database doesn't import data as UTF-8 (at least for csv coutries)
 
 ## Future

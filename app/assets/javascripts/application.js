@@ -14,12 +14,12 @@
 //= require turbolinks
 //= require_tree .
 
-document.addEventListener("DOMContentLoaded", function() {
+var ready = function() {
 	var anchors = document.querySelectorAll("a[href^='#']");
 	for (var i = 0; i < anchors.length; i++) {
 		anchors[i].addEventListener("click", smoothScroll);
 	}
-});
+};
 
 var smoothScroll = (e) => {
 	var anchor = e.target.getAttribute("href").replace('#', '');
@@ -31,4 +31,7 @@ var smoothScroll = (e) => {
 	}, 300);
 	
 	e.preventDefault();
-}
+};
+
+$(document).ready(ready);
+$(document).on('turbolinks:load', ready);
