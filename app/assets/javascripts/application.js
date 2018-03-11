@@ -22,8 +22,13 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 var smoothScroll = (e) => {
-	e.preventDefault();
-	var anchor = e.target.attr("href").replace('#', '');
-	var target_div = document.getElementById(anchor);
+	var anchor = e.target.getAttribute("href").replace('#', '');
+	var target_div = $(document.getElementById(anchor));
+	var header = $('header');
 
+	$("html, body").animate({
+		scrollTop: target_div.offset().top - header.height()
+	}, 300);
+	
+	e.preventDefault();
 }

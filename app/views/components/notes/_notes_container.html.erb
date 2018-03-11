@@ -49,27 +49,29 @@
 	}
 ] %>
 
-<div class="notes-container" id="notes">
-	<%= render(
-		partial: 'components/notes/note_single',
-		locals: {
-			type: 'form',
-			content: {
-				text: 'Tap here to write a new note...',
-				country: 'Canada'
-			}
-		}
-	) %>
-	<% notes.each do |note| %>
+<div class="notes-wrapper" id="notes">
+	<div class="notes-container">
 		<%= render(
 			partial: 'components/notes/note_single',
 			locals: {
-				type: 'text',
+				type: 'form',
 				content: {
-					text: note[:text],
-					country: note[:country]
+					text: 'Tap here to write a new note...',
+					country: 'Canada'
 				}
 			}
 		) %>
-	<% end %>
+		<% notes.each do |note| %>
+			<%= render(
+				partial: 'components/notes/note_single',
+				locals: {
+					type: 'text',
+					content: {
+						text: note[:text],
+						country: note[:country]
+					}
+				}
+			) %>
+		<% end %>
+	</div>
 </div>
