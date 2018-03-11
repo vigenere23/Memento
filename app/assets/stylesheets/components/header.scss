@@ -10,7 +10,7 @@ header {
 	position: fixed;
 	top: 0;
 	// box-shadow: $shadow-level-2;
-	border-bottom: 2px solid $divider;
+	border-bottom: 2px solid $divider-color;
 	z-index: 50;
 
 	@media screen and (max-width: $phone) {

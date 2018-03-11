@@ -1,12 +1,4 @@
-<%= render(
-	partial: 'components/header',
-	locals: {
-		actions: [
-			text: 'New note',
-			url: './notes/new'
-		]
-	}
-) %>
+<%= render partial: 'components/header' %>
 
 <%= render(
 	partial: 'components/divs/hero_div',
@@ -14,8 +6,8 @@
 		text: 'Read notes from all across the world',
 		bg_url: 'hero_bg.svg',
 		button: true,
-		button_text: 'View stats',
-		button_url: '#stats'
+		button_text: 'Read more',
+		button_url: '#notes'
 	}
 ) %>
 

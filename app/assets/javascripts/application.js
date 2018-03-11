@@ -13,3 +13,17 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+
+document.addEventListener("DOMContentLoaded", function() {
+	var anchors = document.querySelectorAll("a[href^='#']");
+	for (var i = 0; i < anchors.length; i++) {
+		anchors[i].addEventListener("click", smoothScroll);
+	}
+});
+
+var smoothScroll = (e) => {
+	e.preventDefault();
+	var anchor = e.target.attr("href").replace('#', '');
+	var target_div = document.getElementById(anchor);
+
+}

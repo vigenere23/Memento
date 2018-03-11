@@ -4,10 +4,6 @@ class NotesController < ApplicationController
 		@countries = Country.select(:id,:name)
 	end
 
-	def new
-		@countries = Country.select(:name)
-	end
-
 	def create
 		@note = Note.new(note_params)
 		@note.save
