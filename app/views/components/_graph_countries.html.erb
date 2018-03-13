@@ -1,2 +1,4 @@
-<%= content_tag :div, class: "graph-countries", :data => {countries: @data.keys, count: @data.values} do %>
-<% end %>
+<div class="graph-countries">
+	<%= content_tag :div, class: "graph", :data => {countries: @country_data.keys.to_a, count: @country_data.values.to_a, size: @note_size} do %>
+	<% end %>
+</div>

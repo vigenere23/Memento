@@ -1,4 +1,4 @@
-var ready = function() {
+var init = function() {
 	var anchors = document.querySelectorAll("a[href^='#']");
 	for (var i = 0; i < anchors.length; i++) {
 		anchors[i].addEventListener("click", smoothScroll);
@@ -17,5 +17,5 @@ var smoothScroll = (e) => {
 	e.preventDefault();
 };
 
-$(document).ready(ready);
-$(document).on('turbolinks:load', ready);
+$(document).ready(init);
+$(document).on('turbolinks:load', init);

@@ -1,21 +1,32 @@
-$(document).ready(function() {
-	var graph = $('.graph-country');
-	console.log('0');
-	var d3graph = d3.select('.graph-country');
-	console.log('1');
+var init = function() {
+	var graph = $('.graph-countries > .graph');
+	var d3graph = d3.select('.graph-countries > .graph');
+	
 	var countries = graph.data('countries');
-	console.log('2');
-	var count = d3.values(graph.data('count'));
-	console.log('3');
-	var max = d3.max(count);
-	console.log('4');
-	count = count.map(x => x / max * 100);
-	console.log('5');
+	var count = graph.data('count');
+	var size = graph.data('size');
 
-	d3graph.selectAll('.bar')
+	var max = d3.max(count);
+	
+	var bar_width = 100 / count.length;
+
+	var bars = d3graph.selectAll('.bar')
 		.data(count)
 		.enter()
-			.append('div')
+		.append('div')
 			.attr('class', 'bar')
-			.style('height', (d) => d + '%');
-});
+			.attr('title', (d, i) => countries[i])
+			.style('height', (d) => d / max * 85 + '%')
+			.style('width', bar_width + '%');
+	
+	bars.append('p')
+		.attr('class', 'percentage')
+		.text((d) => Math.round(d / size * 100 * 100) / 100 + '%');
+	
+	bars.append('p')
+		.attr('class', 'country')
+		.text((d, i) => countries[i]);
+};
+
+$(document).ready(init);
+$(document).on('turbolinks:load', init);
