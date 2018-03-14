@@ -33,11 +33,20 @@
 <%= render(
 	partial: 'components/divs/about_div',
 	locals: {
-		id: 'about',
 		align_left: false,
 		title: 'Know what people around the world think',
 		text: 'See thousands of texts from all the countries, arranged in a beautiful collection of sticky notes. You will never be alone anymore.',
 		image: 'earth.svg'
+	}
+) %>
+
+<%= render(
+	partial: 'components/divs/about_div',
+	locals: {
+		align_left: true,
+		title: 'See where they come from',
+		text: 'See statistics about the most popular countries. Know where they share the most stories.',
+		image: 'graph.svg'
 	}
 ) %>
 
