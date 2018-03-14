@@ -1,32 +1,37 @@
 @import '../_variables';
 
-.notes-container {
+.notes-wrapper {
 	width: 100%;
-	max-width: 800px;
-	margin: auto;
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
+	padding: 50px 5%;
 
-	> * { // normally a single-note component
-		flex-basis: 33.33%;
-		flex-grow: 0;
-		flex-shrink: 0;
-		min-width: 250px;
-		max-width: 300px;
-
-		&:after {
-			content: "";
-			display: block;
-			padding-bottom: 100%;
-		}
+	.notes-container {
+		width: 100%;
+		max-width: 800px;
+		margin: auto;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
 	
-		@media screen and (max-width: $tablet) {
-			flex-basis: 50%;
-		}
+		> * { // normally a single-note component
+			flex-basis: 33.33%;
+			flex-grow: 0;
+			flex-shrink: 0;
+			min-width: 250px;
+			max-width: 300px;
 	
-		@media screen and (max-width: $phone) {
-			flex-basis: 100%;
+			&:after {
+				content: "";
+				display: block;
+				padding-bottom: 100%;
+			}
+		
+			@media screen and (max-width: $tablet) {
+				flex-basis: 50%;
+			}
+		
+			@media screen and (max-width: $phone) {
+				flex-basis: 100%;
+			}
 		}
 	}
 }
