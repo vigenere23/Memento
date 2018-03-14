@@ -18,19 +18,43 @@ var init = function() {
 			.append('div')
 				.attr('class', 'bar')
 				.attr('title', (d, i) => countries[i])
-				.style('height', (d) => d / max * 100 + '%')
-				.style('width', bar_width + '%');
+				.style('width', bar_width + '%')
+				.style('height', 0)
+
+		bars.transition()
+			.style('height', (d) => d / max * 100 + '%')
+			.delay((d, i) => i * 60)
+			.duration(600)
+			.ease(d3.easeQuadInOut);
 		
 		bars.append('div')
-			.attr('class', 'color');
+			.attr('class', 'color')
+			.style('opacity', 0)
+			.transition()
+				.style('opacity', 1)
+				.delay((d, i) => i * 60)
+				.duration(600)
+				.ease(d3.easeQuadInOut);
 		
 		bars.append('p')
 			.attr('class', 'percentage')
-			.text((d) => Math.round(d / size * 100 * 100) / 100 + '%');
+			.text((d) => Math.round(d / size * 100 * 100) / 100 + '%')
+			.style('opacity', 0)
+			.transition()
+				.style('opacity', 1)
+				.delay((d, i) => i * 60)
+				.duration(600)
+				.ease(d3.easeQuadInOut);
 		
 		bars.append('p')
 			.attr('class', 'country')
-			.text((d, i) => countries[i]);
+			.text((d, i) => countries[i])
+			.style('opacity', 0)
+			.transition()
+				.style('opacity', 1)
+				.delay((d, i) => i * 60)
+				.duration(600)
+				.ease(d3.easeQuadInOut);
 	}
 };
 

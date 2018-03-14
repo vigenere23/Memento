@@ -1,5 +1,5 @@
 <% if (!@countries_data.empty?) && (@countries_data.size > 4) %>
-	<div class="graph-countries">
+	<div class="graph-countries" id="stats">
 		<%= content_tag :div, class: "graph", :data => {countries: @countries_data.keys.to_a, count: @countries_data.values.to_a, size: @note_size} do %>
 		<% end %>
 	</div>
