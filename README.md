@@ -1,4 +1,4 @@
-# README
+# Memento
 
 Memento is an app about sharing small moments, thoughts, or even ideas, from wherever you are in the world.
 
