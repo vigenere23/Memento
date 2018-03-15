@@ -21,30 +21,30 @@ var init = function() {
 				.style('width', bar_width + '%')
 				.style('height', 0)
 
-		bars.transition()
+		var anim = d3.transition()
+			.duration(1000)
+			.ease(d3.easeQuad);
+
+		var delay = (d,i) => i * 100;
+
+		bars.transition(anim)
 			.style('height', (d) => d / max * 100 + '%')
-			.delay((d, i) => i * 70)
-			.duration(700)
-			.ease(d3.easeQuadInOut);
+			.delay(delay);
 		
 		bars.append('div')
 			.attr('class', 'color')
 			.style('opacity', 0)
-			.transition()
+			.transition(anim)
 				.style('opacity', 1)
-				.delay((d, i) => i * 70)
-				.duration(700)
-				.ease(d3.easeQuadInOut);
+				.delay(delay);
 		
 		bars.append('p')
 			.attr('class', 'percentage')
 			.text('0%')
 			.style('opacity', 0)
-			.transition()
-				.duration(700)
-				.delay((d, i) => i * 70)
-				.ease(d3.easeQuadInOut)
+			.transition(anim)
 				.style('opacity', 1)
+				.delay(delay)
 				.tween('text', function(d) {
 					var i = d3.interpolate(0, d / size * 100);
 					return (t) => {
@@ -58,9 +58,7 @@ var init = function() {
 			.style('opacity', 0)
 			.transition()
 				.style('opacity', 1)
-				.delay((d, i) => i * 60)
-				.duration(600)
-				.ease(d3.easeQuadInOut);
+				.delay(delay);
 	}
 };
 
