@@ -23,8 +23,8 @@ var init = function() {
 
 		bars.transition()
 			.style('height', (d) => d / max * 100 + '%')
-			.delay((d, i) => i * 60)
-			.duration(600)
+			.delay((d, i) => i * 70)
+			.duration(700)
 			.ease(d3.easeQuadInOut);
 		
 		bars.append('div')
@@ -32,19 +32,25 @@ var init = function() {
 			.style('opacity', 0)
 			.transition()
 				.style('opacity', 1)
-				.delay((d, i) => i * 60)
-				.duration(600)
+				.delay((d, i) => i * 70)
+				.duration(700)
 				.ease(d3.easeQuadInOut);
 		
 		bars.append('p')
 			.attr('class', 'percentage')
-			.text((d) => Math.round(d / size * 100 * 100) / 100 + '%')
+			.text('0%')
 			.style('opacity', 0)
 			.transition()
+				.duration(700)
+				.delay((d, i) => i * 70)
+				.ease(d3.easeQuadInOut)
 				.style('opacity', 1)
-				.delay((d, i) => i * 60)
-				.duration(600)
-				.ease(d3.easeQuadInOut);
+				.tween('text', function(d) {
+					var i = d3.interpolate(0, d / size * 100);
+					return (t) => {
+						this.textContent = Math.round(i(t) * 100) / 100 + '%';
+					};
+				});
 		
 		bars.append('p')
 			.attr('class', 'country')
