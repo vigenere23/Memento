@@ -8,8 +8,8 @@ Note: for UI reasons, the graph will only appear when at least 5 countries will 
 
 To run the app, you need to have the following prerequisites installed:
 
-- Ruby (lastest = 2.5.0)
-- Ruby on Rails (lastest = 5.1.5)
+- Ruby
+- Ruby on Rails
 
 ### Installing dependencies
 
