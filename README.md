@@ -8,8 +8,43 @@ Note: for UI reasons, the graph will only appear when at least 5 countries will 
 
 To run the app, you need to have the following prerequisites installed:
 
+- PostgreSQL (10)
 - Ruby
 - Ruby on Rails
+
+### Setuping database
+
+#### Linux
+
+```
+$ sudo apt install -y postgresql-10
+$ sudo touch /var/lib/postgresql/10/main/postgresql.conf
+$ sudo -u postgres /usr/lib/postgresql/10/bin/pg_ctl -D /var/lib/postgresql/10/main restart
+$ sudo -u postgres psql
+postgres=# ALTER USER postgres PASSWORD '<your new root password for postgres>';
+postgres=# \q
+$ sudo nano /etc/postgresql/10/main/pg_hba.conf
+```
+
+Replace the line :
+
+```
+local   all         postgres                          ident
+```
+
+By :
+
+```
+local   all         postgres                          md5
+```
+
+Then : 
+
+```
+$ sudo -u postgres /usr/lib/postgresql/10/bin/pg_ctl -D /var/lib/postgresql/10/main restart
+```
+
+You will need to rerun this line everytime the postgreSQL server is not up and running.
 
 ### Installing dependencies
 
@@ -18,18 +53,17 @@ To run the app, you need to have the following prerequisites installed:
 ### Creating necessary database users
 
 ```
-psql -U postgres
-[Password for user postgres:] <enter the password>
-[postgres=#] CREATE USER "Memento" WITH CREATEDB LOGIN PASSWORD 'dev';
+$ psql -U postgres -W
+Password for user postgres: <enter the postgres root password>
+postgres=# CREATE USER "Memento" WITH CREATEDB LOGIN PASSWORD 'dev';
+postgres=# \q
 ```
-Text inside `[]` means terminal output.
-
-This will create the necessary user for creating the database.
 
 ### Setting the database with rails
 
 `cd` to project directory and execute:
 ```
+gem install
 rails db:setup
 rails db:migrate
 ```
@@ -40,11 +74,11 @@ This will create the database and the tables that will be used.
 
 Execute the following commands:
 ```
-psql -U postgres -d "Memento_development"
-[Password for user postgres:] <enter the password>
-[Memento_development=#] COPY countries (abbr,name) FROM '<absolute_path_to_parent_folder>/Memento/resources/countries.csv' CSV ENCODING 'UTF-8' delimiter ',';
+$ psql -U postgres -d "Memento_development"
+Password for user postgres: <enter postgres root password>
+Memento_development=# COPY countries (abbr,name) FROM '<absolute_path_to_parent_folder>/Memento/resources/countries.csv' CSV ENCODING 'UTF-8' delimiter ',';
+Memento_development=# \q
 ```
-Text inside `[]` means terminal output.
 
 This will populate the table `countries` with every countries name and their abbreviations (codes).
 
