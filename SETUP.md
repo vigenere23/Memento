@@ -1,4 +1,4 @@
-# Setup <!-- omit in toc -->
+# Setup (Linux) <!-- omit in toc -->
 
 ## Table of content <!-- omit in toc -->
 

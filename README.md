@@ -4,7 +4,7 @@ Memento is an app about sharing small moments, thoughts, or even ideas, from whe
 
 Note: for UI reasons, the graph will only appear when at least 5 countries will be listed. This is not a bug.
 
-## Setup
+## Setup (Linux)
 
 Before installation, please ensure that the [setup](SETUP.md) steps have been filled.
 
