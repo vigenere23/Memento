@@ -31,7 +31,7 @@ local   all         postgres                          md5
 
 Then :
 
-```cmd
+```bash
 sudo -u postgres /usr/lib/postgresql/10/bin/pg_ctl -D /var/lib/postgresql/10/main restart
 ```
 
@@ -45,14 +45,14 @@ Once it's setup, make sure to install and use the right version.
 
 With rbenv :
 
-```cmd
+```bash
 rbenv install $(cat .ruby-version)
 rbenv local $(cat .ruby-version)
 ```
 
 Then, install the `bundler` gem needed to later install the needed dependencies.
 
-```cmd
+```bash
 gem install bundler
 ```
 
