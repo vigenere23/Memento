@@ -6,11 +6,7 @@ Note: for UI reasons, the graph will only appear when at least 5 countries will 
 
 ## Installation
 
-To run the app, you need to have the following prerequisites installed:
-
-- PostgreSQL (10)
-- Ruby
-- Ruby on Rails
+Before installation, please ensure that the [setup](SETUP.md) steps have been filled.
 
 ### Setuping database
 
@@ -48,45 +44,43 @@ You will need to rerun this line everytime the postgreSQL server is not up and r
 
 ### Installing dependencies
 
-`cd` to project directory and execute `bundle install`.
-
-### Creating necessary database users
-
-```
-$ psql -U postgres -W
-Password for user postgres: <enter the postgres root password>
-postgres=# CREATE USER "Memento" WITH CREATEDB LOGIN PASSWORD 'dev';
-postgres=# \q
+```bash
+sudo apt install -y libpq-dev
+bundle install
 ```
 
-### Setting the database with rails
+If any other error message appears, make sure to install the needed listed dependencies and then try again.
 
-`cd` to project directory and execute:
+### Preparing the database
+
+```txt
+psql -U postgres -W
+[Password for user postgres:] <enter the password>
+[postgres=#] CREATE USER "Memento" WITH CREATEDB LOGIN PASSWORD 'dev';
+[postgres=#] \q
+cp config/database.yml.template config/database.yml
 ```
-gem install
+
+Make sure to enter the correct password for default environment in the `config/database.yml` file. Then :
+
+```bash
 rails db:setup
 rails db:migrate
 ```
 
-This will create the database and the tables that will be used.
-
 ### Populate the `countries` table
 
-Execute the following commands:
+```txt
+psql -U postgres -d "Memento_development" -W
+[Password for user postgres:] <enter the password>
+[Memento_development=#] COPY countries (abbr,name) FROM '<absolute_path_to_parent_folder>/Memento/resources/countries.csv' CSV ENCODING 'UTF-8' delimiter ',';
 ```
-$ psql -U postgres -d "Memento_development"
-Password for user postgres: <enter postgres root password>
-Memento_development=# COPY countries (abbr,name) FROM '<absolute_path_to_parent_folder>/Memento/resources/countries.csv' CSV ENCODING 'UTF-8' delimiter ',';
-Memento_development=# \q
-```
-
-This will populate the table `countries` with every countries name and their abbreviations (codes).
 
 ### Launch the app
 
 `cd` to project directory and execute `rails server`.
 
-The app will be available at http://localhost:3000.
+The app will be available at <http://localhost:3000>.
 
 ## Known issues
 
