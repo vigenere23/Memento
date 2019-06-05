@@ -12,7 +12,7 @@ Before installation, please ensure that the [setup](SETUP.md) steps have been fi
 
 ```bash
 sudo apt install -y libpq-dev
-bundle install
+bundle
 ```
 
 If any other error message appears, make sure to install the needed listed dependencies and then try again.
@@ -30,21 +30,13 @@ cp config/database.yml.template config/database.yml
 Make sure to enter the correct password for default environment in the `config/database.yml` file. Then :
 
 ```bash
-rails db:setup
-rails db:migrate
-```
-
-### Populating
-
-```txt
-psql -U postgres -d "Memento_development" -W
-[Password for user postgres:] <enter the password>
-[Memento_development=#] COPY countries (abbr,name) FROM '<absolute_path_to_parent_folder>/Memento/resources/countries.csv' CSV ENCODING 'UTF-8' delimiter ',';
+bin/rails db:setup
+bin/rails db:migrate
 ```
 
 ### Running
 
-`cd` to project directory and execute `rails server`.
+`cd` to project directory and execute `bin/rails s`.
 
 The app will be available at <http://localhost:3000>.
 
