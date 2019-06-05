@@ -8,13 +8,12 @@
 ## PostgreSQL
 
 ```cmd
-sudo apt install -y postgresql-10
-sudo touch /var/lib/postgresql/10/main/postgresql.conf
-sudo -u postgres /usr/lib/postgresql/10/bin/pg_ctl -D /var/lib/postgresql/10/main restart
+sudo apt install -y postgresql-11
+sudo -u postgres /usr/lib/postgresql/11/bin/pg_ctl -D /var/lib/postgresql/11/main restart
 sudo -u postgres psql
 [postgres=#] ALTER USER postgres PASSWORD '<your new root password for postgres>';
 [postgres=#] \q
-sudo nano /etc/postgresql/10/main/pg_hba.conf
+sudo nano /etc/postgresql/11/main/pg_hba.conf
 ```
 
 Replace the line :
