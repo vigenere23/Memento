@@ -10,6 +10,10 @@
 	flex-wrap: wrap;
 	overflow: hidden;
 
+	@media screen and (max-width: $phone) {
+		padding: 20px;
+	}
+
 	> div {
 		width: 100%;
 		max-width: 600px;
@@ -19,7 +23,7 @@
 		> .about-content {
 			width: 60%;
 			margin: 0;
-			min-width: 300px;
+			min-width: 280px;
 			max-width: 500px;
 
 			> .title {
@@ -28,6 +32,10 @@
 				margin: 0;
 				margin-bottom: 12px;
 				z-index: 2;
+
+				@media screen and (max-width: $phone) {
+					font-size: 30px;
+				}
 			}
 		
 			> .text {
@@ -36,6 +44,10 @@
 				color: $secondary-text;
 				margin: 0;
 				z-index: 2;
+
+				@media screen and (max-width: $phone) {
+					font-size: 16px;
+				}
 			}
 		}
 	
