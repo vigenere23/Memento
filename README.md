@@ -39,12 +39,3 @@ bin/rails db:migrate
 `cd` to project directory and execute `bin/rails s`.
 
 The app will be available at <http://localhost:3000>.
-
-## Known issues
-
-None
-
-## Future
-
-- Adding a footer
-- AJAX loadings
