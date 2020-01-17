@@ -2,7 +2,9 @@
 
 Memento is an app about sharing small moments, thoughts, or even ideas, from wherever you are in the world.
 
-Note: for UI reasons, the graph will only appear when at least 5 countries will be listed. This is not a bug.
+![memento](https://user-images.githubusercontent.com/32545895/72642048-82e22800-3939-11ea-9839-3573c18e2803.png)
+
+> Note: for UI reasons, the graph will only appear when at least 5 countries will be listed. This is not a bug.
 
 ## Setup (Linux)
 
